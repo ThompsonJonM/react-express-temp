@@ -1,5 +1,7 @@
 # Create React Express App
 
+- MUST NPM RUN START FROM THE SERVER SIDE, NOT THE CLIENT
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.

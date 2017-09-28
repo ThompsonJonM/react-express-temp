@@ -1,5 +1,6 @@
 // Dependencies
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class ViewStudents extends React.Component {
     render() {
@@ -10,6 +11,13 @@ export default class ViewStudents extends React.Component {
 
     componentWillMount() {
         console.log('This is before the render');
+        axios('/api/students/all').then(response => {
+            // console.log(response);
+
+            this.setState({
+                students: response
+            });
+        });
     }
 }
 

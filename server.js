@@ -8,6 +8,24 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
+let students = [
+  {
+    name: 'Mary'
+  },
+
+  {
+    name: 'Henry'
+  },
+
+  {
+    name: 'Phil'
+  }
+];
+
+app.get('/api/students/all', function(req, res) {
+  res.json(students);
+});
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
